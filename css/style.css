@@ -607,6 +607,8 @@ a:focus {
   background-color: #fff;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 0px 30px 0px rgba(0, 42, 106, 0.1);
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .feature-item .feature-icon i {
@@ -1491,3 +1493,40 @@ a:focus {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+/* Flexbox styling for container to align items in the navbar */
+.container {
+  width: 100%;
+  padding: 20;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.company-name {
+  font-size: 35px; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #000; /* Choose the color you prefer */
+  margin-left: 10px;
+}
+
+/* Center the company name on smaller screens */
+@media (max-width: 768px) {
+  .container {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Center content on mobile */
+  }
+
+  .navbar-brand {
+      flex: 1; /* Pushes logo to the left */
+  }
+
+  .company-name {
+      flex: 2; /* Centers the company name */
+      text-align: center;
+  }
+
+  .navbar-toggler {
+      flex: 1; /* Pushes the toggle icon to the right */
+  }
+}
