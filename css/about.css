@@ -1,0 +1,865 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 20px;
+  color: #000;
+}
+
+.logo strong {
+  color: #1abc9c; /* Green shade for "CURE" */
+}
+
+/* Basic Styling */
+.nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav ul li {
+margin: 0 15px;
+position: relative; /* Important for positioning the dropdown */
+}
+
+.nav ul li a {
+text-decoration: none;
+color: #333;
+font-size: 16px;
+}
+
+/* Hover effect for the main links */
+.nav ul li a:hover {
+color: #1abc9c; /* Hover color */
+}
+
+/* Basic Styling */
+.nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav ul li {
+margin: 0 15px;
+position: relative; /* Important for positioning the dropdown */
+}
+
+.nav ul li a {
+text-decoration: none;
+color: #333;
+font-size: 16px;
+}
+
+/* Hover effect for the main links */
+.nav ul li a:hover {
+color: #1abc9c; /* Hover color */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+display: none; /* Hidden by default */
+position: absolute;
+top: 100%; /* Position it below the parent item */
+left: 0;
+background-color: white; /* Background color of the dropdown */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+border-radius: 5px;
+padding: 10px 0;
+min-width: 160px;
+z-index: 100; /* Ensure it's on top */
+}
+
+.dropdown-menu li {
+padding: 10px 20px;
+white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu li a {
+color: #333;
+font-size: 14px;
+text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+color: #1abc9c; /* Hover color for dropdown items */
+}
+
+/* Show the dropdown when hovering over the parent li */
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+/* Hide the dropdown when not hovering over the parent li */
+.nav ul li:not(:hover) .dropdown-menu {
+display: none;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  margin-right: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-button {
+  padding: 8px 15px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contact-button:hover {
+  background-color: #16a085; /* Slightly darker shade on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.nav {
+    display: none; /* Hide the navigation by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav.active {
+    display: flex; /* Show the navigation when active */
+}
+
+.nav ul {
+    flex-direction: column;
+}
+
+.nav ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.contact {
+    display: none; /* Hide the contact section in mobile view */
+}
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    color: #333;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .footer-brand,
+  .footer-contact,
+  .footer-socials {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact h4,
+  .footer-socials h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .footer-contact ul,
+  .footer-socials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-contact ul li,
+  .footer-socials ul li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-contact ul li span,
+  .footer-socials ul li span {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .footer-socials ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-brand, .footer-contact, .footer-socials {
+      margin-bottom: 20px;
+    }
+  
+    .footer-contact ul li,
+    .footer-socials ul li {
+      justify-content: center;
+    }
+  }
+
+  .icon {
+    margin-right: 8px;  /* Adjust this value for the desired space */
+    vertical-align: middle;  /* Aligns the icons vertically with the text */
+  }
+
+  /* General Styling for the Section */
+.decorative-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f9f9f7; /* Light beige background */
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* Styling for the Decorative Images */
+.decorative-image {
+    flex: 0 0 auto;
+    width: 15%; /* Adjust size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorative-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Styling for the Banner Content */
+.banner-content {
+    flex: 1 1 70%;
+    padding: 1rem;
+}
+
+.banner-content h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333; /* Dark text for good contrast */
+    margin-bottom: 1rem;
+}
+
+.banner-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #f4b500; /* Bright yellow color */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d29d00; /* Slightly darker yellow on hover */
+}
+
+.two-column-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  flex-wrap: wrap; /* Allows columns to stack on small screens */
+}
+
+.column {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Adds space between stacked columns */
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-title .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .two-column-section {
+      padding: 20px; /* Reduce padding on small screens */
+  }
+
+  .column {
+      flex: 1 1 100%; /* Make columns take full width on smaller screens */
+  }
+
+  .icon-title .icon {
+      width: 30px; /* Smaller icons on mobile */
+      height: 30px;
+  }
+
+  h3 {
+      font-size: 1.25rem; /* Adjust font size for headings */
+  }
+
+  p {
+      font-size: 0.9rem; /* Adjust font size for paragraphs */
+  }
+}
+
+@media (max-width: 480px) {
+  .two-column-section {
+      padding: 15px; /* Further reduce padding on very small screens */
+  }
+
+  h3 {
+      font-size: 1.1rem; /* Smaller headings for very small screens */
+  }
+
+  p {
+      font-size: 0.85rem; /* Adjust font size for paragraphs on very small screens */
+  }
+}
+
+
+/* General Section Styling */
+.services-section {
+  background-color: #004d40; /* Dark green background */
+  padding: 50px 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 50px;
+}
+
+/* Title and Description Styling */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: black;
+  text-align: center;
+}
+
+.section-description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: black;
+  text-align: center;
+}
+
+/* Cards Container */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Card */
+.card {
+  background-color: #ffffff; /* White card background */
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px; /* Fixed width for desktop */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  position: relative;
+}
+
+.card-content {
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  width: 100px; /* Adjust icon size for better mobile view */
+  margin-bottom: 10px;
+}
+
+.card-title {
+  color: #004d40; /* Dark green */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  color: #606060; /* Light gray */
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.card-highlight {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #004d40; /* Matching the green theme */
+}
+
+/* Button Styling */
+.learn-more-btn {
+  background-color: #004d40; /* Dark green button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.learn-more-btn:hover {
+  background-color: #00695c; /* Slightly lighter green for hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-section {
+      padding: 40px 10px; /* Reduce padding */
+      margin: 15px;
+  }
+
+  .section-title {
+      font-size: 1.6rem; /* Adjust title size */
+  }
+
+  .section-description {
+      font-size: 1rem; /* Adjust description font size */
+  }
+
+  .services-cards {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center;
+      gap: 15px;
+  }
+
+  .card {
+      width: 80%; /* Cards take up 80% width on smaller screens */
+      margin: 20px 0; /* Add spacing between cards */
+  }
+
+  .card-icon {
+      width: 80px; /* Reduce icon size for mobile */
+  }
+
+  .card-title {
+      font-size: 1.1rem; /* Adjust title size for mobile */
+  }
+
+  .card-description {
+      font-size: 0.9rem; /* Adjust description font size */
+  }
+
+  .card-highlight {
+      font-size: 0.85rem; /* Adjust highlight text size */
+  }
+
+  .learn-more-btn {
+      font-size: 0.85rem; /* Adjust button text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+      padding: 30px 10px; /* Further reduce padding for very small screens */
+  }
+
+  .section-title {
+      font-size: 1.4rem; /* Smaller title for very small screens */
+  }
+
+  .section-description {
+      font-size: 0.9rem; /* Smaller description font size */
+  }
+
+  .services-cards {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center;
+      gap: 10px; /* Reduced gap */
+  }
+
+  .card {
+      width: 90%; /* Cards take up 90% width on very small screens */
+      margin: 15px 0; /* Reduced margin */
+  }
+
+  .card-icon {
+      width: 60px; /* Smaller icon for very small screens */
+  }
+
+  .card-title {
+      font-size: 1rem; /* Adjust title font size */
+  }
+
+  .card-description {
+      font-size: 0.85rem; /* Adjust description font size */
+  }
+
+  .card-highlight {
+      font-size: 0.8rem; /* Adjust highlight text size */
+  }
+
+  .learn-more-btn {
+      font-size: 0.75rem; /* Smaller button text for very small screens */
+  }
+}
+
+
+  /* Care Services Section Styles */
+.care-services {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background color for the section */
+    text-align: center;
+  }
+  
+  .care-services-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .care-services-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Container for the Care Cards */
+  .care-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  /* Care Card Styles */
+  .care-service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .care-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .care-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .care-card-title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .care-card-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .care-cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .care-cards-container {
+      grid-template-columns: 1fr; /* 1 card per row on small screens */
+    }
+  }
+  
+
+  /* Newsletter Section Styles */
+.newsletter-section {
+    background-color: #f4f4f9; /* Light background color */
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .newsletter-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-section input[type="email"] {
+    padding: 10px 15px;
+    width: 70%;
+    max-width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .newsletter-section input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .newsletter-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .newsletter-section button:focus {
+    outline: none;
+  }
+
+
+  /* Footer Styling */
+.footer { 
+  padding: 40px 60px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensures mobile responsiveness */
+  color: white;
+}
+
+.footer-logo-desc {
+  max-width: 35%;
+  color: white;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  color: #009688;
+  margin: 0;
+}
+
+.footer-logo-desc p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+  color: white;
+}
+
+.footer-contact, .footer-socials {
+  max-width: 25%;
+}
+
+.footer-contact h3, .footer-socials h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-contact p, .footer-socials p {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.footer-contact a, .footer-socials a {
+  color: #009688;
+  text-decoration: none;
+}
+
+.footer-contact span {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.footer-contact a:hover, .footer-socials a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo-desc,
+  .footer-contact,
+  .footer-socials {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo-desc p {
+    font-size: 16px;
+  }
+
+  .footer-logo h2 {
+    font-size: 22px;
+  }
+
+  .footer-contact p,
+  .footer-socials p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,675 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 20px;
+  color: #000;
+}
+
+.logo strong {
+  color: #1abc9c; /* Green shade for "CURE" */
+}
+
+/* Basic Styling */
+.nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav ul li {
+margin: 0 15px;
+position: relative; /* Important for positioning the dropdown */
+}
+
+.nav ul li a {
+text-decoration: none;
+color: #333;
+font-size: 16px;
+}
+
+/* Hover effect for the main links */
+.nav ul li a:hover {
+color: #1abc9c; /* Hover color */
+}
+
+/* Basic Styling */
+.nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav ul li {
+margin: 0 15px;
+position: relative; /* Important for positioning the dropdown */
+}
+
+.nav ul li a {
+text-decoration: none;
+color: #333;
+font-size: 16px;
+}
+
+/* Hover effect for the main links */
+.nav ul li a:hover {
+color: #1abc9c; /* Hover color */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+display: none; /* Hidden by default */
+position: absolute;
+top: 100%; /* Position it below the parent item */
+left: 0;
+background-color: white; /* Background color of the dropdown */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+border-radius: 5px;
+padding: 10px 0;
+min-width: 160px;
+z-index: 100; /* Ensure it's on top */
+}
+
+.dropdown-menu li {
+padding: 10px 20px;
+white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu li a {
+color: #333;
+font-size: 14px;
+text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+color: #1abc9c; /* Hover color for dropdown items */
+}
+
+/* Show the dropdown when hovering over the parent li */
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+/* Hide the dropdown when not hovering over the parent li */
+.nav ul li:not(:hover) .dropdown-menu {
+display: none;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  margin-right: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-button {
+  padding: 8px 15px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contact-button:hover {
+  background-color: #16a085; /* Slightly darker shade on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.nav {
+    display: none; /* Hide the navigation by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav.active {
+    display: flex; /* Show the navigation when active */
+}
+
+.nav ul {
+    flex-direction: column;
+}
+
+.nav ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+}
+
+.contact {
+    display: none; /* Hide the contact section in mobile view */
+}
+}
+
+
+.footer-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    color: #333;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .footer-brand,
+  .footer-contact,
+  .footer-socials {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact h4,
+  .footer-socials h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .footer-contact ul,
+  .footer-socials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-contact ul li,
+  .footer-socials ul li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-contact ul li span,
+  .footer-socials ul li span {
+    font-size: 1.1rem;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .footer-socials ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-brand, .footer-contact, .footer-socials {
+      margin-bottom: 20px;
+    }
+  
+    .footer-contact ul li,
+    .footer-socials ul li {
+      justify-content: center;
+    }
+  }
+
+  .icon {
+    margin-right: 8px;  /* Adjust this value for the desired space */
+    vertical-align: middle;  /* Aligns the icons vertically with the text */
+  }
+
+/*end of header and footer */
+
+
+
+/* Newsletter Section Styles */
+.newsletter-section {
+    background-color: #f4f4f9; /* Light background color */
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .newsletter-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-section input[type="email"] {
+    padding: 10px 15px;
+    width: 70%;
+    max-width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .newsletter-section input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .newsletter-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .newsletter-section button:focus {
+    outline: none;
+  }
+  
+  .department-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .heading {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black; /* Text color */
+    padding: 0.5rem 1rem;
+    background-image: url('https://img.freepik.com/free-vector/decorative-soft-green-watercolor-brush-stroke-design-background_1055-20735.jpg?t=st=1733062247~exp=1733065847~hmac=b7fd739cbc5eaba13f6656c3b283ff524924164a245ac87fd54f0235970662c7&w=1060'); /* Replace with your image URL */
+    background-size: 200px; /* Adjust size to fit */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px; /* Optional: round the corners */
+}
+
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Section Container */
+.care-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 30px;
+  flex-wrap: wrap; /* Enable wrapping for mobile screens */
+}
+
+/* Text Content Styling */
+.content {
+  flex: 2;
+  min-width: 300px; /* Ensure proper layout on small screens */
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.underline {
+  width: 50px;
+  height: 4px;
+  background-color: #1CA079;
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #555;
+}
+
+/* Highlighted Box Styling */
+.highlight-box {
+  background-color: #eef8f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  height: 350px;
+  width: 320px;
+}
+
+.highlight-box h3 {
+  font-size: 20px;
+  color: #1CA079;
+  margin-bottom: 15px;
+}
+
+.highlight-box ul {
+  list-style: none;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.highlight-box ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.highlight-box ul li strong {
+  font-weight: bold;
+}
+
+.highlight-box .urgent {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #444;
+}
+
+.highlight-box .urgent strong {
+  font-size: 18px;
+  color: #1CA079;
+}
+
+/* Services Section Styling */
+.services-section {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  max-width: 1200px;
+}
+
+.services-section h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 50px;
+  height: 4px;
+  background-color: #2ecc71;
+  margin-bottom: 20px;
+}
+
+/* Feature List Styling */
+.features-list {
+  list-style: none;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.features-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #555;
+}
+
+.features-list .checkmark {
+  color: #2ecc71;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #27ae60;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .care-service {
+      flex-direction: column; /* Stack sections vertically */
+      gap: 20px; /* Adjust spacing */
+  }
+
+  .content h2 {
+      font-size: 24px; /* Adjust heading size */
+  }
+
+  .content p {
+      font-size: 14px; /* Adjust paragraph font size */
+      margin-left: 10px;
+  }
+
+  .highlight-box h3 {
+      font-size: 18px; /* Adjust box heading size */
+  }
+
+  .highlight-box ul li {
+      font-size: 14px; /* Adjust list font size */
+  }
+
+  .cta-button {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 15px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .content h2 {
+      font-size: 22px;
+  }
+
+  .underline {
+      width: 40px;
+  }
+
+  .cta-button {
+      padding: 6px 12px;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #061C23;
+  padding: 40px 60px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensures mobile responsiveness */
+}
+
+.footer-logo-desc {
+  max-width: 35%;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  color: #009688;
+  margin: 0;
+}
+
+.footer-logo-desc p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.footer-contact, .footer-socials {
+  max-width: 25%;
+}
+
+.footer-contact h3, .footer-socials h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-contact p, .footer-socials p {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact a, .footer-socials a {
+  color: #009688;
+  text-decoration: none;
+}
+
+.footer-contact span {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.footer-contact a:hover, .footer-socials a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logo-desc,
+  .footer-contact,
+  .footer-socials {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo-desc p {
+    font-size: 16px;
+  }
+
+  .footer-logo h2 {
+    font-size: 22px;
+  }
+
+  .footer-contact p,
+  .footer-socials p {
+    font-size: 16px;
+  }
+}
